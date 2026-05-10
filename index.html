@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5DL2Z7BMP"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5DL2Z7BMP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-D5DL2Z7BMP');
 </script>
 <meta charset="UTF-8">
@@ -39,7 +37,6 @@
     overflow-x: hidden;
   }
 
-  /* ── NOISE TEXTURE ── */
   body::before {
     content: '';
     position: fixed; inset: 0; z-index: 0;
@@ -47,7 +44,6 @@
     pointer-events: none;
   }
 
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; width: 100%; z-index: 100;
     padding: 24px 60px;
@@ -56,9 +52,7 @@
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border2);
   }
-  .nav-brand {
-    display: flex; align-items: center; gap: 14px;
-  }
+  .nav-brand { display: flex; align-items: center; gap: 14px; }
   .nav-logo-mark {
     width: 36px; height: 36px;
     border: 1px solid var(--gold);
@@ -68,398 +62,85 @@
     font-size: 0.85rem; font-weight: 600;
     color: var(--gold); letter-spacing: 0.05em;
   }
-  .nav-name {
-    font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text); font-weight: 400;
-  }
+  .nav-name { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); font-weight: 400; }
   .nav-links { display: flex; gap: 40px; list-style: none; }
-  .nav-links a {
-    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--text-muted); text-decoration: none; font-weight: 400;
-    transition: color 0.3s;
-  }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
   .nav-links a:hover { color: var(--gold); }
-  .nav-cta {
-    padding: 10px 28px;
-    border: 1px solid var(--gold);
-    color: var(--gold); font-family: 'Jost', sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
-    text-decoration: none; font-weight: 500;
-    transition: all 0.3s;
-  }
+  .nav-cta { padding: 10px 28px; border: 1px solid var(--gold); color: var(--gold); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
   .nav-cta:hover { background: var(--gold); color: var(--dark); }
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 120px 60px 80px;
-    position: relative; overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute; inset: 0; z-index: 0;
-    background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
-  }
-  .hero-grid {
-    position: absolute; inset: 0; z-index: 0;
-    background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 0%, transparent 100%);
-  }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 60px 80px; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%); }
+  .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 0%, transparent 100%); }
   .hero-content { position: relative; z-index: 1; max-width: 800px; }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 12px;
-    font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--gold); font-weight: 400; margin-bottom: 32px;
-  }
-  .hero-tag::before {
-    content: ''; width: 40px; height: 1px; background: var(--gold);
-  }
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 7vw, 6rem);
-    font-weight: 300; line-height: 1.05;
-    color: var(--text); margin-bottom: 8px;
-    letter-spacing: -0.01em;
-  }
-  .hero-title strong {
-    font-weight: 500; color: var(--gold2);
-    font-style: italic;
-  }
-  .hero-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    color: var(--text-muted); font-weight: 300; font-style: italic;
-    margin-bottom: 48px; line-height: 1.5;
-  }
+  .hero-tag { display: inline-flex; align-items: center; gap: 12px; font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; }
+  .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 7vw, 6rem); font-weight: 300; line-height: 1.05; color: var(--text); margin-bottom: 8px; }
+  .hero-title strong { font-weight: 500; color: var(--gold2); font-style: italic; }
+  .hero-subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--text-muted); font-style: italic; margin-bottom: 48px; line-height: 1.5; }
   .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-gold {
-    padding: 16px 40px;
-    background: var(--gold); color: var(--dark);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
-    font-weight: 600; text-decoration: none;
-    transition: all 0.3s; display: inline-flex; align-items: center; gap: 10px;
-  }
+  .btn-gold { padding: 16px 40px; background: var(--gold); color: var(--dark); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 10px; }
   .btn-gold:hover { background: var(--gold2); transform: translateY(-2px); }
-  .btn-outline {
-    padding: 16px 40px;
-    border: 1px solid rgba(255,255,255,0.15); color: var(--text);
-    font-family: 'Jost', sans-serif;
-    font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
-    font-weight: 400; text-decoration: none;
-    transition: all 0.3s;
-  }
+  .btn-outline { padding: 16px 40px; border: 1px solid rgba(255,255,255,0.15); color: var(--text); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
   .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
-  .hero-scroll {
-    position: absolute; bottom: 48px; left: 60px;
-    display: flex; align-items: center; gap: 12px;
-    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--text-muted);
-  }
-  .hero-scroll::before {
-    content: ''; width: 1px; height: 40px;
-    background: linear-gradient(to bottom, transparent, var(--gold));
-    animation: scrollLine 2s ease-in-out infinite;
-  }
-  @keyframes scrollLine {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
-  }
-
-  /* ── NUMBERS ── */
-  .numbers-bar {
-    padding: 48px 60px;
-    border-top: 1px solid var(--border2);
-    border-bottom: 1px solid var(--border2);
-    display: flex; justify-content: space-around; align-items: center;
-    background: var(--dark2);
-  }
+  .numbers-bar { padding: 48px 60px; border-top: 1px solid var(--border2); border-bottom: 1px solid var(--border2); display: flex; justify-content: space-around; align-items: center; background: var(--dark2); }
   .number-item { text-align: center; }
-  .number-value {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem; font-weight: 500; color: var(--gold);
-    line-height: 1;
-  }
-  .number-label {
-    font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); margin-top: 8px;
-  }
-  .number-divider { width: 1px; height: 48px; background: var(--border); }
+  .number-value { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 500; color: var(--gold); line-height: 1; }
+  .number-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-top: 8px; }
 
-  /* ── SECTION ── */
   section { padding: 100px 60px; position: relative; }
-  .section-tag {
-    font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--gold); font-weight: 400; margin-bottom: 20px;
-    display: flex; align-items: center; gap: 16px;
-  }
+  .section-tag { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
   .section-tag::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--gold); opacity: 0.4; }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
-    font-weight: 300; color: var(--text); line-height: 1.15;
-    margin-bottom: 16px;
-  }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 300; color: var(--text); line-height: 1.15; margin-bottom: 64px; }
   .section-title em { font-style: italic; color: var(--gold2); }
 
-  /* ── SERVIZI ── */
-  .servizi-section { background: var(--dark2); }
-  .servizi-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 2px; margin-top: 64px;
-  }
-  .servizio-card {
-    background: var(--dark3); padding: 48px;
-    border: 1px solid var(--border2);
-    transition: all 0.3s; position: relative; overflow: hidden;
-  }
-  .servizio-card::before {
-    content: ''; position: absolute; top: 0; left: 0;
-    width: 100%; height: 2px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    transform: scaleX(0); transition: transform 0.4s;
-  }
-  .servizio-card:hover::before { transform: scaleX(1); }
+  .servizi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; }
+  .servizio-card { background: var(--dark3); padding: 48px; border: 1px solid var(--border2); transition: all 0.3s; position: relative; }
   .servizio-card:hover { background: rgba(201,168,76,0.03); }
-  .servizio-icon {
-    font-size: 1.8rem; margin-bottom: 24px;
-    display: block;
-  }
-  .servizio-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem; font-weight: 500; color: var(--text);
-    margin-bottom: 12px;
-  }
-  .servizio-desc {
-    font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;
-    font-weight: 300;
-  }
-  .servizio-features {
-    list-style: none; margin-top: 24px;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .servizio-features li {
-    font-size: 0.78rem; color: var(--text-muted);
-    display: flex; align-items: center; gap: 10px;
-  }
-  .servizio-features li::before {
-    content: ''; width: 16px; height: 1px; background: var(--gold); flex-shrink: 0;
-  }
-  .servizio-card.featured {
-    background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(10,10,15,0) 100%);
-    border-color: rgba(201,168,76,0.25);
-  }
-  .servizio-badge {
-    position: absolute; top: 24px; right: 24px;
-    font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
-    background: var(--gold); color: var(--dark);
-    padding: 4px 12px; font-weight: 600;
-  }
+  .servizio-icon { font-size: 1.8rem; margin-bottom: 24px; display: block; }
+  .servizio-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--text); margin-bottom: 12px; }
+  .servizio-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+  .servizio-features { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .servizio-features li { font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
+  .servizio-features li::before { content: ''; width: 16px; height: 1px; background: var(--gold); }
 
-  /* ── PRICING ── */
-  .pricing-section { background: var(--dark); }
-  .pricing-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 32px; margin-top: 64px; max-width: 900px;
-  }
-  .pricing-card {
-    border: 1px solid var(--border);
-    padding: 48px 40px; position: relative;
-    transition: all 0.3s;
-  }
-  .pricing-card:hover { border-color: rgba(201,168,76,0.4); }
-  .pricing-card.main {
-    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 100%);
-    border-color: rgba(201,168,76,0.3);
-  }
-  .pricing-label {
-    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 24px; font-weight: 500;
-  }
-  .pricing-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem; font-weight: 500; color: var(--text);
-    margin-bottom: 32px;
-  }
-  .pricing-price {
-    margin-bottom: 8px;
-  }
-  .pricing-amount {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem; font-weight: 300; color: var(--gold2);
-    line-height: 1;
-  }
-  .pricing-period {
-    font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.1em;
-    margin-top: 4px;
-  }
-  .pricing-divider {
-    width: 40px; height: 1px; background: var(--border);
-    margin: 28px 0;
-  }
-  .pricing-features {
-    list-style: none; display: flex; flex-direction: column; gap: 12px;
-    margin-bottom: 36px;
-  }
-  .pricing-features li {
-    font-size: 0.82rem; color: var(--text-muted);
-    display: flex; align-items: flex-start; gap: 12px; line-height: 1.5;
-  }
-  .pricing-features li::before {
-    content: '✓'; color: var(--gold); font-size: 0.75rem;
-    flex-shrink: 0; margin-top: 2px;
-  }
-  .pricing-cta {
-    display: block; width: 100%; padding: 14px;
-    text-align: center; text-decoration: none;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
-    font-weight: 500; transition: all 0.3s;
-  }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 20px; }
+  .pricing-card { border: 1px solid var(--border); padding: 48px 40px; background: var(--dark2); transition: all 0.3s; display: flex; flex-direction: column; }
+  .pricing-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+  .pricing-card.featured { background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 100%); border-color: var(--gold); }
+  .pricing-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; font-weight: 500; }
+  .pricing-name { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--text); margin-bottom: 32px; }
+  .pricing-amount { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--gold2); line-height: 1; }
+  .pricing-period { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+  .pricing-features { list-style: none; margin: 32px 0; flex-grow: 1; }
+  .pricing-features li { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px; display: flex; gap: 12px; }
+  .pricing-features li::before { content: '✓'; color: var(--gold); }
+  .pricing-cta { padding: 14px; text-align: center; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; transition: all 0.3s; }
   .pricing-cta.gold { background: var(--gold); color: var(--dark); }
-  .pricing-cta.gold:hover { background: var(--gold2); }
   .pricing-cta.outline { border: 1px solid var(--border); color: var(--text-muted); }
-  .pricing-cta.outline:hover { border-color: var(--gold); color: var(--gold); }
 
-  /* ── EXTRA SERVICES ── */
-  .extra-services {
-    margin-top: 48px; max-width: 900px;
-    border: 1px solid var(--border2); padding: 36px 40px;
-    background: var(--dark2);
-  }
-  .extra-title {
-    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--text-muted); margin-bottom: 24px;
-  }
-  .extra-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
-  }
-  .extra-item {
-    display: flex; align-items: center; gap: 12px;
-    font-size: 0.82rem; color: var(--text-muted);
-  }
-  .extra-item::before {
-    content: '→'; color: var(--gold); font-size: 0.75rem; flex-shrink: 0;
-  }
-  .extra-note {
-    margin-top: 20px; font-size: 0.75rem; color: var(--text-muted);
-    font-style: italic; font-family: 'Cormorant Garamond', serif;
-  }
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; }
+  .process-step { padding: 40px 32px; background: var(--dark3); border: 1px solid var(--border2); }
+  .step-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: rgba(201,168,76,0.15); line-height: 1; margin-bottom: 20px; }
 
-  /* ── COME LAVORO ── */
-  .process-section { background: var(--dark2); }
-  .process-steps {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 2px; margin-top: 64px;
-  }
-  .process-step {
-    padding: 40px 32px; background: var(--dark3);
-    border: 1px solid var(--border2); position: relative;
-  }
-  .step-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem; font-weight: 300;
-    color: rgba(201,168,76,0.15); line-height: 1;
-    margin-bottom: 20px;
-  }
-  .step-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem; font-weight: 500; color: var(--text);
-    margin-bottom: 12px;
-  }
-  .step-desc {
-    font-size: 0.8rem; color: var(--text-muted); line-height: 1.7; font-weight: 300;
-  }
+  .cta-section { text-align: center; padding: 120px 60px; background: var(--dark); }
+  .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); color: var(--text); margin-bottom: 48px; }
 
-  /* ── CTA FINALE ── */
-  .cta-section {
-    background: var(--dark);
-    text-align: center; padding: 120px 60px;
-    position: relative; overflow: hidden;
-  }
-  .cta-section::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
-  }
-  .cta-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-  .cta-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 300; color: var(--text); line-height: 1.1;
-    margin-bottom: 20px;
-  }
-  .cta-title em { font-style: italic; color: var(--gold2); }
-  .cta-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem; color: var(--text-muted);
-    font-style: italic; margin-bottom: 48px; line-height: 1.6;
-  }
-  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .cta-contact {
-    margin-top: 48px; padding-top: 48px;
-    border-top: 1px solid var(--border2);
-    display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-  }
-  .contact-item {
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-  }
-  .contact-label {
-    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--text-muted);
-  }
-  .contact-value {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem; color: var(--gold); text-decoration: none;
-    transition: color 0.2s;
-  }
-  .contact-value:hover { color: var(--gold2); }
+  footer { background: var(--dark2); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border2); font-size: 0.7rem; color: var(--text-muted); }
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--dark2);
-    padding: 32px 60px;
-    display: flex; justify-content: space-between; align-items: center;
-    border-top: 1px solid var(--border2);
-  }
-  .footer-brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.9rem; color: var(--text-muted); font-style: italic;
-  }
-  .footer-copy {
-    font-size: 0.68rem; letter-spacing: 0.08em; color: var(--text-muted);
-  }
-
-  /* ── ANIMATIONS ── */
-  .fade-up {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
+  .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 20px 24px; }
-    .nav-links { display: none; }
-    .hero { padding: 100px 24px 60px; }
-    .numbers-bar { padding: 32px 24px; flex-wrap: wrap; gap: 24px; }
-    section { padding: 60px 24px; }
-    .servizi-grid { grid-template-columns: 1fr; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .process-steps { grid-template-columns: 1fr 1fr; }
-    .extra-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
-    .cta-section { padding: 80px 24px; }
+    nav { padding: 20px 24px; } .nav-links { display: none; }
+    section { padding: 60px 24px; } .pricing-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 16px; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-brand">
     <div class="nav-logo-mark">ME</div>
@@ -468,229 +149,161 @@
   <ul class="nav-links">
     <li><a href="#servizi">Servizi</a></li>
     <li><a href="#pricing">Prezzi</a></li>
-    <li><a href="#processo">Come lavoro</a></li>
+    <li><a href="#processo">Metodo</a></li>
     <li><a href="#contatti">Contatti</a></li>
   </ul>
-  <a href="https://wa.me/393479425074?text=Ciao%20Alessandro,%20ho%20visto%20il%20tuo%20sito%20e%20vorrei%20saperne%20di%20più." class="nav-cta" target="_blank">Parliamone</a>
+  <a href="https://wa.me/393479425074" class="nav-cta">Parliamone</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content fade-up">
-    <div class="hero-tag">Consulente Digitale · Metodo Essenziale Studio</div>
-    <h1 class="hero-title">
-      Il tuo ristorante<br>merita una<br><strong>presenza digitale</strong><br>all'altezza
-    </h1>
-    <p class="hero-subtitle">
-      Siti web professionali, menu digitali e prenotazioni online<br>per ristoranti e attività locali in provincia di Parma
-    </p>
+    <div class="hero-tag">Consulente Digitale · Essential Metrics</div>
+    <h1 class="hero-title">Il tuo ristorante<br>merita una<br><strong>presenza digitale</strong><br>all'altezza</h1>
+    <p class="hero-subtitle">Sistemi di prenotazione intelligenti e siti web d'autore per la ristorazione a Parma.</p>
     <div class="hero-actions">
-      <a href="#pricing" class="btn-gold">Scopri i Prezzi →</a>
+      <a href="#pricing" class="btn-gold">Scopri i Piani →</a>
       <a href="#servizi" class="btn-outline">I Servizi</a>
     </div>
   </div>
-  <div class="hero-scroll">Scorri</div>
 </section>
 
-<!-- NUMBERS -->
 <div class="numbers-bar">
-  <div class="number-item">
-    <div class="number-value">48h</div>
-    <div class="number-label">Tempo di consegna</div>
-  </div>
-  <div class="number-divider"></div>
-  <div class="number-item">
-    <div class="number-value">100%</div>
-    <div class="number-label">Gestione remota</div>
-  </div>
-  <div class="number-divider"></div>
-  <div class="number-item">
-    <div class="number-value">0€</div>
-    <div class="number-label">Costi nascosti</div>
-  </div>
-  <div class="number-divider"></div>
-  <div class="number-item">
-    <div class="number-value">∞</div>
-    <div class="number-label">Aggiornamenti menu</div>
-  </div>
+  <div class="number-item"><div class="number-value">48h</div><div class="number-label">Consegna</div></div>
+  <div class="number-item"><div class="number-value">100%</div><div class="number-label">Gestione Remota</div></div>
+  <div class="number-item"><div class="number-value">0€</div><div class="number-label">Costi Nascosti</div></div>
+  <div class="number-item"><div class="number-value">∞</div><div class="number-label">Menu Digitali</div></div>
 </div>
 
-<!-- SERVIZI -->
-<section class="servizi-section" id="servizi">
+<section id="servizi">
   <div class="section-tag">Cosa faccio</div>
-  <h2 class="section-title">Servizi pensati per<br><em>chi lavora in sala</em></h2>
+  <h2 class="section-title">Servizi per <em>chi vive la sala</em></h2>
   <div class="servizi-grid">
-    <div class="servizio-card featured fade-up">
-      <div class="servizio-badge">Più richiesto</div>
+    <div class="servizio-card fade-up">
       <span class="servizio-icon">🌐</span>
       <div class="servizio-title">Sito Web Professionale</div>
-      <p class="servizio-desc">Un sito elegante, mobile-first, con tutto quello che i tuoi clienti cercano online — senza che tu debba toccare nulla.</p>
+      <p class="servizio-desc">Veloce, elegante e mobile-first. La tua vetrina digitale pronta a convertire visitatori in ospiti.</p>
       <ul class="servizio-features">
-        <li>Design personalizzato sul tuo locale</li>
-        <li>Menu digitale aggiornabile</li>
-        <li>QR code per i tavoli</li>
-        <li>Form prenotazioni online</li>
-        <li>Collegato a Google Maps</li>
+        <li>Design su misura</li>
+        <li>Ottimizzato per smartphone</li>
+        <li>Integrazione Google Maps</li>
       </ul>
     </div>
     <div class="servizio-card fade-up">
       <span class="servizio-icon">📱</span>
-      <div class="servizio-title">Google My Business</div>
-      <p class="servizio-desc">La tua scheda Google ottimizzata — foto, orari, descrizione e link al sito. I turisti ti trovano quando cercano dove mangiare.</p>
+      <div class="servizio-title">WhatsApp Booking</div>
+      <p class="servizio-desc">Automazione delle prenotazioni. Ricevi i dati dei clienti direttamente sul tuo telefono, senza caos.</p>
       <ul class="servizio-features">
-        <li>Ottimizzazione completa profilo</li>
-        <li>Gestione foto e contenuti</li>
-        <li>Collegamento al sito web</li>
-        <li>Monitoraggio recensioni</li>
+        <li>Tasto prenota rapido</li>
+        <li>Nessuna commissione esterna</li>
+        <li>Gestione clienti diretta</li>
       </ul>
     </div>
     <div class="servizio-card fade-up">
       <span class="servizio-icon">📋</span>
-      <div class="servizio-title">Menu Digitale + QR Code</div>
-      <p class="servizio-desc">I clienti scansionano il QR al tavolo e vedono il menu aggiornato. Addio menu plastificati da ristampare ogni stagione.</p>
+      <div class="servizio-title">Menu Digitale QR</div>
+      <p class="servizio-desc">Menu interattivi sempre aggiornati. Elimina i costi di stampa e gestisci le variazioni in tempo reale.</p>
       <ul class="servizio-features">
-        <li>Menu sempre aggiornato online</li>
-        <li>QR code personalizzato</li>
-        <li>Sezione allergeni</li>
-        <li>Aggiornamento in 24 ore</li>
-      </ul>
-    </div>
-    <div class="servizio-card fade-up">
-      <span class="servizio-icon">✉️</span>
-      <div class="servizio-title">Servizi Aggiuntivi</div>
-      <p class="servizio-desc">Gestione social media, foto professionali in loco, campagne Google o Meta Ads. Ogni progetto è su misura.</p>
-      <ul class="servizio-features">
-        <li>Gestione Instagram e Facebook</li>
-        <li>Foto professionali del locale</li>
-        <li>Campagne pubblicitarie locali</li>
-        <li>Preventivo personalizzato</li>
+        <li>QR Code personalizzati</li>
+        <li>Aggiornamenti illimitati</li>
+        <li>Sezione allergeni chiara</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing-section" id="pricing">
+<section id="pricing" class="pricing-section">
   <div class="section-tag">Investimento</div>
-  <h2 class="section-title">Prezzi chiari,<br><em>nessuna sorpresa</em></h2>
+  <h2 class="section-title">Prezzi trasparenti</h2>
   <div class="pricing-grid">
-    <div class="pricing-card main fade-up">
-      <div class="pricing-label">⭐ Pacchetto Base</div>
-      <div class="pricing-name">Sito Web Completo</div>
-      <div class="pricing-price">
-        <div class="pricing-amount">a partire da €297</div>
-        <div class="pricing-period">una tantum — setup e realizzazione</div>
-      </div>
-      <div style="margin-top: 12px;">
-        <div class="pricing-amount" style="font-size:1.8rem;">+ €97 / mese</div>
-        <div class="pricing-period">hosting · manutenzione · aggiornamenti</div>
-      </div>
-      <div class="pricing-divider"></div>
+    <div class="pricing-card fade-up">
+      <div class="pricing-label">Essenziale</div>
+      <div class="pricing-name">Basic Plan</div>
+      <div class="pricing-amount">€249</div>
+      <div class="pricing-period">setup una tantum</div>
       <ul class="pricing-features">
-        <li>Sito web professionale mobile-ready</li>
-        <li>Menu digitale con QR code per i tavoli</li>
-        <li>Form prenotazioni online</li>
-        <li>Google My Business ottimizzato</li>
-        <li>Aggiornamenti menu inclusi (2/mese)</li>
-        <li>Assistenza via WhatsApp</li>
-        <li>Hosting incluso nel canone</li>
+        <li>Sito Web One-Page</li>
+        <li>Menu Digitale QR</li>
+        <li>Tasto WhatsApp Standard</li>
+        <li>Deploy in 48 ore</li>
       </ul>
-      <a href="https://wa.me/393479425074?text=Ciao%20Alessandro,%20sono%20interessato%20al%20pacchetto%20base." class="pricing-cta gold" target="_blank">Inizia Ora →</a>
+      <a href="https://wa.me/393479425074?text=Ciao%20Alessandro,%20vorrei%20informazioni%20sul%20pacchetto%20BASIC" class="pricing-cta outline">Scegli Basic</a>
+    </div>
+    <div class="pricing-card featured fade-up">
+      <div class="pricing-label">Consigliato</div>
+      <div class="pricing-name">Growth Plan</div>
+      <div class="pricing-amount">€449</div>
+      <div class="pricing-period">setup una tantum</div>
+      <ul class="pricing-features">
+        <li>Tutto il pacchetto Basic</li>
+        <li><strong>Database Clienti (Email/Cell)</strong></li>
+        <li>Ottimizzazione Google Maps</li>
+        <li>Supporto prioritario</li>
+      </ul>
+      <a href="https://wa.me/393479425074?text=Ciao%20Alessandro,%20vorrei%20informazioni%20sul%20pacchetto%20GROWTH" class="pricing-cta gold">Scegli Growth</a>
     </div>
     <div class="pricing-card fade-up">
-      <div class="pricing-label">Servizi Extra</div>
-      <div class="pricing-name">Su Misura</div>
-      <div class="pricing-price">
-        <div class="pricing-amount">Preventivo</div>
-        <div class="pricing-period">personalizzato in base alle tue esigenze</div>
-      </div>
-      <div class="pricing-divider"></div>
+      <div class="pricing-label">Esclusivo</div>
+      <div class="pricing-name">Elite Plan</div>
+      <div class="pricing-amount">Custom</div>
+      <div class="pricing-period">preventivo su misura</div>
       <ul class="pricing-features">
-        <li>Gestione social media (Instagram + Facebook)</li>
-        <li>Foto professionali del locale</li>
-        <li>Campagne Google o Meta Ads</li>
-        <li>Restyling sito web esistente</li>
-        <li>Pacchetti personalizzati combinati</li>
+        <li>Tutto il pacchetto Growth</li>
+        <li>Follow-up automatico post-cena</li>
+        <li>Marketing via WhatsApp</li>
+        <li>Analisi dati mensile</li>
       </ul>
-      <a href="https://wa.me/393479425074?text=Ciao%20Alessandro,%20vorrei%20un%20preventivo%20per%20servizi%20extra." class="pricing-cta outline" target="_blank">Contattami →</a>
+      <a href="https://wa.me/393479425074?text=Ciao%20Alessandro,%20vorrei%20una%20consulenza%20per%20il%20pacchetto%20ELITE" class="pricing-cta outline">Contattami</a>
     </div>
   </div>
 </section>
 
-<!-- PROCESSO -->
-<section class="process-section" id="processo">
-  <div class="section-tag">Come lavoro</div>
-  <h2 class="section-title">Semplice e veloce,<br><em>tutto da remoto</em></h2>
+<section id="processo">
+  <div class="section-tag">Metodo</div>
+  <h2 class="section-title">Dalla bozza al <em>tavolo pieno</em></h2>
   <div class="process-steps">
     <div class="process-step fade-up">
       <div class="step-number">01</div>
-      <div class="step-title">Primo contatto</div>
-      <p class="step-desc">Mi scrivi su WhatsApp o via email. Ti mostro una bozza gratuita del tuo sito già pronta.</p>
+      <div class="step-title">Contatto</div>
+      <p class="step-desc">Ti mostro una demo gratuita personalizzata per il tuo locale.</p>
     </div>
     <div class="process-step fade-up">
       <div class="step-number">02</div>
-      <div class="step-title">Personalizzazione</div>
-      <p class="step-desc">Aggiungiamo i tuoi piatti, le tue foto, i tuoi orari. Il sito prende forma in base al tuo locale.</p>
+      <div class="step-title">Sviluppo</div>
+      <p class="step-desc">Configuriamo menu, foto e sistema di prenotazione.</p>
     </div>
     <div class="process-step fade-up">
       <div class="step-number">03</div>
-      <div class="step-title">Consegna in 48h</div>
-      <p class="step-desc">Il sito è online sul tuo dominio. Ti consegno anche il QR code pronto da stampare per i tavoli.</p>
-    </div>
-    <div class="process-step fade-up">
-      <div class="step-number">04</div>
-      <div class="step-title">Supporto continuo</div>
-      <p class="step-desc">Cambio menu, aggiornamenti, problemi tecnici — mi scrivi su WhatsApp e risolvo entro 24 ore.</p>
+      <div class="step-title">Online</div>
+      <p class="step-desc">In 48 ore il tuo ristorante è pronto a ricevere prenotazioni digitali.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA FINALE -->
-<section class="cta-section" id="contatti">
-  <div class="cta-content fade-up">
-    <h2 class="cta-title">Pronto a portare<br>il tuo ristorante<br><em>online?</em></h2>
-    <p class="cta-subtitle">
-      Ti preparo una bozza gratuita del tuo sito in 24 ore.<br>Nessun impegno, nessun costo nascosto.
-    </p>
-    <div class="cta-actions">
-      <a href="https://wa.me/393479425074?text=Ciao%20Alessandro,%20vorrei%20una%20bozza%20gratuita%20del%20mio%20sito." class="btn-gold" target="_blank">💬 Scrivimi su WhatsApp</a>
-      <a href="mailto:metodoessenziale.studio@gmail.com" class="btn-outline">✉ Invia una Email</a>
-    </div>
-    <div class="cta-contact">
-      <div class="contact-item">
-        <span class="contact-label">WhatsApp</span>
-        <a href="https://wa.me/393479425074" class="contact-value" target="_blank">+39 3479425074</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">Email</span>
-        <a href="mailto:metodoessenziale.studio@gmail.com" class="contact-value">metodoessenziale.studio@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">Zona</span>
-        <span class="contact-value" style="cursor:default;">Parma e Provincia</span>
-      </div>
-    </div>
+<section id="contatti" class="cta-section">
+  <div class="fade-up">
+    <h2 class="cta-title">Pronto a trasformare<br>la tua <em>gestione?</em></h2>
+    <a href="https://wa.me/393479425074" class="btn-gold">Scrivimi su WhatsApp</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-brand">Alessandro Agnetti — Metodo Essenziale Studio</div>
-  <div class="footer-copy">© 2025 · Consulente Digitale · Parma e Provincia</div>
+  <div>Essential Metrics — Alessandro Agnetti</div>
+  <div>© 2026 · Parma e Provincia</div>
 </footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
