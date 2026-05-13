@@ -1,147 +1,149 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5DL2Z7BMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-D5DL2Z7BMP');
-</script>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Essenziale | Digital Marketing a Parma</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5DL2Z7BMP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D5DL2Z7BMP');
+    </script>
 
-<style>
-    /* Reset e stili per integrazione fluida */
-    .me-integration-section {
-        background-color: #ffffff;
-        padding: 60px 20px;
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-    }
-    .me-container {
-        max-width: 900px;
-        margin: 0 auto;
-        color: #333;
-    }
-    .me-headline {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    .me-headline h2 {
-        font-size: 2.5rem;
-        color: #1a1a1a;
-        margin-bottom: 15px;
-        font-weight: 800;
-    }
-    .me-accent-bar {
-        width: 60px;
-        height: 5px;
-        background-color: #d4a017;
-        margin: 0 auto 20px;
-    }
+    <style>
+        /* === STILI GENERALI (DARK MODE) === */
+        body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #e0e0e0; background-color: #121212; line-height: 1.6; }
+        * { box-sizing: border-box; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; }
+        h1, h2, h3, h4 { color: #ffffff; margin-top: 0; }
 
-    /* Griglia benefici */
-    .me-benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        margin: 40px 0;
-    }
-    .me-card {
-        background: #fdfdfd;
-        border: 1px solid #eee;
-        padding: 25px;
-        border-radius: 12px;
-        transition: transform 0.3s;
-    }
-    .me-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    }
-    .me-card h3 {
-        color: #d4a017;
-        margin-top: 0;
-        font-size: 1.2rem;
-    }
+        /* === HERO SECTION === */
+        .hero { padding: 100px 20px 80px; text-align: center; background-color: #1a1a1a; border-bottom: 1px solid #333; }
+        .hero h1 { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; letter-spacing: -1px; }
+        .hero h1 span { color: #d4a017; } /* Colore accento oro */
+        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px; color: #bbb; }
 
-    /* Sezione Prezzi Integrata */
-    .me-pricing-focus {
-        background: #1a1a1a;
-        color: #fff;
-        padding: 50px 30px;
-        border-radius: 20px;
-        text-align: center;
-        margin-top: 60px;
-    }
-    .me-pricing-focus h3 {
-        color: #d4a017;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    .me-price-tag {
-        font-size: 4rem;
-        font-weight: 900;
-        margin: 20px 0;
-    }
-    .me-price-tag span {
-        font-size: 1.2rem;
-        color: #d4a017;
-    }
-    .me-recurring {
-        display: block;
-        font-size: 1.8rem;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-    .me-btn-wa {
-        display: inline-block;
-        background-color: #25d366;
-        color: #fff;
-        padding: 20px 45px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.3rem;
-        box-shadow: 0 8px 20px rgba(37,211,102,0.3);
-    }
-</style>
+        /* === SEZIONE SERVIZI AGENZIA === */
+        .services { padding: 80px 0; background-color: #121212; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; font-weight: 800; text-transform: uppercase; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { padding: 40px 30px; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.5); border-color: #444; }
+        .service-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; border-bottom: 3px solid #d4a017; padding-bottom: 10px; display: inline-block; }
+        .service-card p { color: #aaa; font-size: 1.05rem; }
 
-<div class="me-integration-section">
-    <div class="me-container">
+        /* === SEZIONE VIP CARD === */
+        .vip-section { background-color: #1a1a1a; padding: 100px 0; border-top: 1px solid #333; }
+        .vip-section .section-subtitle { text-align: center; color: #d4a017; font-size: 1.2rem; font-weight: bold; margin-bottom: 60px; text-transform: uppercase; }
         
-        <div class="me-headline">
-            <div class="me-accent-bar"></div>
-            <h2>La Strategia Verticale: VIP Card Digitale</h2>
-            <p>Il tassello mancante per trasformare i clienti occasionali in clienti ricorrenti.</p>
-        </div>
+        .vip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        
+        .vip-features h3 { font-size: 2rem; margin-bottom: 25px; }
+        .vip-features ul { list-style: none; padding: 0; }
+        .vip-features li { margin-bottom: 20px; font-size: 1.15rem; padding-left: 35px; position: relative; color: #ccc; }
+        .vip-features li::before { content: '✓'; color: #d4a017; font-weight: bold; position: absolute; left: 0; font-size: 1.4rem; top: -2px; }
 
-        <div class="me-benefits-grid">
-            <div class="me-card">
-                <h3>Notifiche Push</h3>
-                <p>Comunica direttamente sul telefono del cliente. Senza costi di pubblicità, senza finire nello spam.</p>
-            </div>
-            <div class="me-card">
-                <h3>Geofencing</h3>
-                <p>Il tuo locale "chiama" il cliente quando si trova nelle vicinanze. Automazione pura.</p>
-            </div>
-            <div class="me-card">
-                <h3>Proprietà del Dato</h3>
-                <p>Non dipendere più dagli algoritmi. I contatti dei tuoi clienti sono tuoi, per sempre.</p>
+        .price-box { background-color: #262626; padding: 50px 40px; border-radius: 20px; text-align: center; border: 2px solid #d4a017; box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+        .price-box h4 { color: #d4a017; text-transform: uppercase; font-size: 1.4rem; margin-bottom: 5px; letter-spacing: 1px; }
+        .price-box p { color: #aaa; margin-bottom: 25px; }
+        .price { font-size: 4rem; font-weight: 900; color: #ffffff; line-height: 1; margin: 20px 0; }
+        .price span { font-size: 1.2rem; font-weight: normal; color: #aaa; vertical-align: middle; }
+        .recurring { font-size: 1.8rem; color: #d4a017; font-weight: bold; display: block; margin-bottom: 30px; }
+        
+        .btn-wa { display: inline-block; background-color: #25d366; color: #ffffff; padding: 20px 40px; border-radius: 50px; font-weight: bold; font-size: 1.3rem; width: 100%; transition: transform 0.2s; box-shadow: 0 5px 15px rgba(37,211,102,0.2); }
+        .btn-wa:hover { transform: scale(1.05); }
+        .urgency { font-size: 0.9rem; color: #888; margin-top: 15px; font-style: italic; display: block; }
+
+        /* === FOOTER === */
+        .footer { text-align: center; padding: 40px 20px; background-color: #0a0a0a; border-top: 1px solid #222; color: #666; font-size: 0.9rem; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .vip-grid { grid-template-columns: 1fr; }
+            .price { font-size: 3.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Metodo <span>Essenziale</span></h1>
+            <p>L'Agenzia di Digital Marketing specializzata nella crescita delle attività locali e della ristorazione a Parma.</p>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Le Nostre Competenze</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <span class="service-icon">📱</span>
+                    <h3>Social Media</h3>
+                    <p>Creiamo contenuti mirati su Instagram e Facebook per trasformare i follower in clienti paganti. Gestione completa e piani editoriali strategici.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">📍</span>
+                    <h3>Local SEO</h3>
+                    <p>Dominare le ricerche locali. Ottimizziamo il tuo profilo per farti trovare quando i clienti a Parma cercano il tuo servizio o il tuo menù.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🎯</span>
+                    <h3>Lead Generation</h3>
+                    <p>Creiamo campagne pubblicitarie ottimizzate per acquisire contatti caldi. Dalle inserzioni al tracciamento, costruiamo sistemi che generano vendite.</p>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <div class="me-pricing-focus">
-            <h3>Soluzione "Roccaforte Parma"</h3>
-            <div class="me-price-tag">390€ <span>Setup Una Tantum</span></div>
-            <div class="me-recurring">+ 97€ / Mese</div>
-            
-            <ul style="text-align: left; display: inline-block; margin-bottom: 40px; padding: 0; list-style: none; font-size: 1.1rem; line-height: 2;">
-                <li>✅ Design VIP Card Personalizzato</li>
-                <li>✅ Integrazione Apple Wallet & Google Pay</li>
-                <li>✅ Notifiche Push Illimitate</li>
-                <li>✅ Kit QR Code Professionale</li>
-                <li>✅ Assistenza Strategica Mensile</li>
-            </ul>
-            
-            <br>
-            <a href="https://wa.me/393479425074" class="me-btn-wa">COMINCIAMO ORA</a>
-            <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.7;">Disponibile per 5 nuovi partner al mese.</p>
+    <section class="vip-section">
+        <div class="container">
+            <h2 class="section-title">Strategia Verticale: VIP Card Digitale</h2>
+            <p class="section-subtitle">Il sistema definitivo per fidelizzare i clienti del tuo locale</p>
+
+            <div class="vip-grid">
+                
+                <div class="vip-features">
+                    <h3>Il futuro della fidelizzazione nel Wallet dei tuoi clienti</h3>
+                    <ul>
+                        <li><strong>Zero App da scaricare:</strong> Si installa in 2 click direttamente su Apple Wallet e Google Pay.</li>
+                        <li><strong>Notifiche Push Gratuite:</strong> Invia avvisi direttamente sul blocco schermo dei tuoi clienti.</li>
+                        <li><strong>Geofencing:</strong> Il telefono del cliente si illumina in automatico quando passa vicino al tuo ristorante a Parma.</li>
+                        <li><strong>Database Privato:</strong> I contatti diventano di tua proprietà. Smetti di dipendere dagli algoritmi dei social.</li>
+                        <li><strong>Tutto Digitale:</strong> Elimina per sempre i costi di stampa delle vecchie tessere cartacee.</li>
+                    </ul>
+                </div>
+
+                <div class="price-box">
+                    <h4>Pacchetto "Roccaforte Parma"</h4>
+                    <p>Progettazione, Setup e Gestione Mensile</p>
+                    
+                    <div class="price">390€ <span>una tantum</span></div>
+                    <span class="recurring">+ 97€ / mese</span>
+                    
+                    <a href="https://wa.me/393479425074" class="btn-wa">CHIEDI INFO SU WHATSAPP</a>
+                    <span class="urgency">*Disponibile solo per 5 nuovi locali questo mese.</span>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-    </div>
-</div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Metodo Essenziale. Tutti i diritti riservati. | Digital Marketing Parma</p>
+        </div>
+    </footer>
+
+</body>
+</html>
